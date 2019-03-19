@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="SuperToolbar">
+        <attr name="toolbar_left_icon" format="reference" />
+        <attr name="toolbar_left_text" format="string" />
+        <attr name="toolbar_title" format="string" />
+        <attr name="toolbar_right_icon" format="reference" />
+        <attr name="toolbar_draw_right" format="reference" />
+        <attr name="toolbar_right_text" format="string" />
+        <attr name="toolbar_start_text" format="string" />
+        <attr name="toolbar_right_text_color" format="reference" />
+        <attr name="toolbar_title_site" format="enum">
+            <enum name="center" value="0" />
+            <enum name="left" value="1" />
+        </attr>
+
+    </declare-styleable>
+
+
+    <declare-styleable name="MyViewPage">
+        <attr name="delay_time" format="integer" /><!--轮播时间默认2000-->
+        <attr name="scroll_time" format="integer" /><!--滑动执行时间默认800-->
+        <attr name="is_auto_play" format="boolean" /><!--是否自动轮播默认true-->
+        <attr name="title_background" format="color|reference" /><!--文字背景-->
+        <attr name="title_textcolor" format="color" /><!--文字颜色-->
+        <attr name="title_textsize" format="dimension" /><!--文字大小-->
+        <attr name="title_height" format="dimension" /><!--文字高度-->
+        <attr name="indicator_width" format="dimension" /><!--指示器宽度-->
+        <attr name="indicator_height" format="dimension" /><!--指示器高度-->
+        <attr name="indicator_margin" format="dimension" /><!--指示器间距-->
+        <attr name="indicator_drawable_selected" format="reference" /><!--指示器选中的效果-->
+        <attr name="indicator_drawable_unselected" format="reference" /><!--指示器未选中的效果-->
+        <attr name="banner_layout" format="reference" />
+        <attr name="banner_default_image" format="reference" /><!--当banner数据为空是显示的默认图片-->
+        <attr name="image_scale_type" format="enum"><!--imageBanner数据为空是显示的默认图片iew的ScaleType作用一样-->
+            <enum name="center" value="0" />
+            <enum name="center_crop" value="1" />
+            <enum name="center_inside" value="2" />
+            <enum name="fit_center" value="3" />
+            <enum name="fit_end" value="4" />
+            <enum name="fit_start" value="5" />
+            <enum name="fit_xy" value="6" />
+            <enum name="matrix" value="7" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="EasyRecyclerView">
+        <attr name="layout_empty" format="reference" />
+        <attr name="layout_progress" format="reference" />
+        <attr name="layout_error" format="reference" />
+        <attr name="recyclerClipToPadding" format="boolean" />
+        <attr name="recyclerPadding" format="dimension" />
+        <attr name="recyclerPaddingTop" format="dimension" />
+        <attr name="recyclerPaddingBottom" format="dimension" />
+        <attr name="recyclerPaddingLeft" format="dimension" />
+        <attr name="recyclerPaddingRight" format="dimension" />
+        <attr name="scrollbarStyle">
+            <enum name="insideOverlay" value="0x0" />
+            <enum name="insideInset" value="0x01000000" />
+            <enum name="outsideOverlay" value="0x02000000" />
+            <enum name="outsideInset" value="0x03000000" />
+        </attr>
+        <attr name="scrollbars">
+            <enum name="vertical" value="1" />
+            <enum name="horizontal" value="0" />
+            <enum name="none" value="2" />
+        </attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="KChartView">
+        <!--公共的-->
+        <attr name="kc_text_size" format="dimension" />
+        <attr name="kc_text_color" format="color" />
+        <attr name="kc_line_width" format="dimension" />
+        <attr name="kc_background_color" format="color" />
+        <attr name="kc_selected_line_color" format="color" />
+        <attr name="kc_selected_line_width" format="dimension" />
+        <attr name="kc_grid_line_width" format="dimension" />
+        <attr name="kc_grid_line_color" format="color" />
+        <attr name="kc_point_width" format="dimension" />
+        <!--macd-->
+        <attr name="kc_macd_width" format="dimension" />
+        <attr name="kc_dif_color" format="color" />
+        <attr name="kc_dea_color" format="color" />
+        <attr name="kc_macd_color" format="color" />
+        <!--kdj-->
+        <attr name="kc_k_color" format="color" />
+        <attr name="kc_d_color" format="color" />
+        <attr name="kc_j_color" format="color" />
+        <!--rsi-->
+        <attr name="kc_rsi1_color" format="color" />
+        <attr name="kc_rsi2_color" format="color" />
+        <attr name="kc_ris3_color" format="color" />
+        <!--boll-->
+        <attr name="kc_up_color" format="color" />
+        <attr name="kc_mb_color" format="color" />
+        <attr name="kc_dn_color" format="color" />
+        <!--main-->
+        <attr name="kc_ma5_color" format="color" />
+        <attr name="kc_ma10_color" format="color" />
+        <attr name="kc_ma30_color" format="color" />
+        <attr name="kc_candle_width" format="dimension" />
+        <attr name="kc_candle_line_width" format="dimension" />
+        <attr name="kc_selector_background_color" format="color" />
+        <attr name="kc_selector_text_size" format="dimension" />
+        <attr name="kc_candle_solid" format="boolean" />
+        <!--tab-->
+        <attr name="kc_tab_background_color" format="color" />
+        <attr name="kc_tab_text_color" format="color" />
+        <attr name="kc_tab_indicator_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="HandicapView">
+        <attr name="buy_bg_color" format="color" />
+        <attr name="sell_bg_color" format="color" />
+        <attr name="buy_text_color" format="color" />
+        <attr name="sell_text_color" format="color" />
+        <attr name="title_text_color" format="color" />
+        <attr name="item_number_color" format="color"/>
+        <attr name="title_text_size" format="dimension" />
+        <attr name="title_text_padding" format="dimension"/>
+        <attr name="item_text_size" format="dimension" />
+        <attr name="about_size" format="dimension"/>
+        <attr name="now_price_size" format="dimension"/>
+        <attr name="now_price_padding" format="dimension"/>
+        <attr name="now_price_line_height" format="dimension"/>
+        <attr name="text_padding_end" format="dimension"/>
+        <attr name="text_padding_start" format="dimension"/>
+    </declare-styleable>
+</resources>

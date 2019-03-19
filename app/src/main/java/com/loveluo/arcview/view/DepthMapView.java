@@ -213,10 +213,7 @@ public class DepthMapView extends View {
                 bottom = (i + 1) * itemHeight + itemMarginTop;
                 paint.setColor(Color.parseColor("#E52D2338"));
             }
-
-
             float right = viewWidth;
-
             System.out.println("左上右下----" + left + "----" + top + "----" + right + "----" + bottom);
             RectF r = new RectF(left, top, right, bottom);
             canvas.drawRect(r, paint);

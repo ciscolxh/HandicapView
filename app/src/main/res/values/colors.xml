@@ -4,4 +4,14 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorRedHalf">#E52D2338</color>
+    <color name="colorGray">#6D7E81</color>
+    <color name="colorBlue">#2BD6F2</color>
+    <color name="colorBlueHalf">#992BD6F2</color>
+
+    <color name="colorBuy">#E5132D3D</color>
+    <color name="colorSell">#E52D2338</color>
+
+    <color name="colorTextBuy">#136F3D</color>
+    <color name="colorTextSell">#6D2338</color>
+    <color name="colorTitleColor">#A8AFB7</color>
 </resources>

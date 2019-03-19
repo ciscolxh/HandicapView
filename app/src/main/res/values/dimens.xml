@@ -1,0 +1,11 @@
+<resources>
+   <dimen name="handicap_title_size">12sp</dimen>
+   <dimen name="handicap_item_size">12sp</dimen>
+   <dimen name="handicap_now_price_size">16sp</dimen>
+   <dimen name="handicap_about_price_size">12sp</dimen>
+   <dimen name="handicap_now_price_padding">12dp</dimen>
+   <dimen name="handicap_now_price_height">5dp</dimen>
+   <dimen name="handicap_title_text_padding">15dp</dimen>
+   <dimen name="handicap_text_padding_end">10dp</dimen>
+   <dimen name="handicap_text_padding_start">10dp</dimen>
+</resources>

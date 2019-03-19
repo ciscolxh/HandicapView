@@ -15,5 +15,9 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"/>
 
+    <com.loveluo.arcview.view.ProgressBarView
+        android:id="@+id/proBar"
+        android:layout_width="match_parent"
+        android:layout_height="100dp" />
 
 </LinearLayout>

@@ -16,17 +16,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *自定义一个扇形。
+ * 自定义一个扇形。
  *
  * @author luo
  * @date 2017/6/10
  */
 
-public class ArcView extends View{
+public class ArcView extends View {
     private List<DateEntity> list = new ArrayList<>();
-    /**宽度**/
+    /**
+     * 宽度
+     **/
     private int w;
-    /**高度**/
+    /**
+     * 高度
+     **/
     private int h;
     private float radius;
     /**
@@ -45,11 +49,11 @@ public class ArcView extends View{
 
 
     public ArcView(Context context) {
-        this(context,null);
+        this(context, null);
     }
 
     public ArcView(Context context, @Nullable AttributeSet attrs) {
-        this(context, attrs,0);
+        this(context, attrs, 0);
     }
 
     public ArcView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
@@ -79,6 +83,7 @@ public class ArcView extends View{
 
     /**
      * 只要重新绘制，必须要重写OnDraw方法。
+     *
      * @param canvas
      */
     @Override
@@ -89,39 +94,39 @@ public class ArcView extends View{
         //算出来总共分了多少份
         float scale = allPoint();
         canvas.save();
-        canvas.translate(w/2,h/2);
-        for (int i=0;i<list.size();i++){
+        canvas.translate(w / 2, h / 2);
+        for (int i = 0; i < list.size(); i++) {
             setPaint(i);
             //终点角度
-            float sweepAngle = list.get(i).getScale()/scale*360;
-            Log.e("终止角度",String.valueOf(sweepAngle-1));
+            float sweepAngle = list.get(i).getScale() / scale * 360;
+            Log.e("终止角度", String.valueOf(sweepAngle - 1));
             //本次起始角度，加上本次终点的角度的一半
             //画出扇形
-            canvas.drawArc(rectF,startAngle,sweepAngle,true,paint);
+            canvas.drawArc(rectF, startAngle, sweepAngle, true, paint);
             //这个是扇形中点的角度。
-            float central = startAngle+((sweepAngle)/2);
-            Log.e("圆心角",String.valueOf(central));
+            float central = startAngle + ((sweepAngle) / 2);
+            Log.e("圆心角", String.valueOf(central));
             //每个扇形的角度
-            startAngle = startAngle + list.get(i).getScale()/scale*360;
-            Log.e("每个扇形的角度",String.valueOf(startAngle));
-            float startX = radius*(float) Math.cos(central*P/180);
-            float startY = radius*(float)Math.sin(central*P/180);
-            float endX = (radius*1.1f)*(float) Math.cos(central*P/180);
-            float endY = (radius*1.1f)*(float)Math.sin(central*P/180);
-            float textX = (radius*1.2f)*(float) Math.cos(central*P/180);
-            float textY = (radius*1.2f)*(float)Math.sin(central*P/180);
+            startAngle = startAngle + list.get(i).getScale() / scale * 360;
+            Log.e("每个扇形的角度", String.valueOf(startAngle));
+            float startX = radius * (float) Math.cos(central * P / 180);
+            float startY = radius * (float) Math.sin(central * P / 180);
+            float endX = (radius * 1.1f) * (float) Math.cos(central * P / 180);
+            float endY = (radius * 1.1f) * (float) Math.sin(central * P / 180);
+            float textX = (radius * 1.2f) * (float) Math.cos(central * P / 180);
+            float textY = (radius * 1.2f) * (float) Math.sin(central * P / 180);
             //画出线段
-            canvas.drawLine(startX,startY,endX,endY,paintLine);
-            if (central>=90&&central<135){
-                textY = textY+radius*0.1f;
-                textX = textX-radius*0.2f;
-            } else if (central>=135&&central<225) {
-                textX = textX-radius*0.2f;
-            }else if (central>=225&&central<=270){
-                textX = textX-radius*0.1f;
+            canvas.drawLine(startX, startY, endX, endY, paintLine);
+            if (central >= 90 && central < 135) {
+                textY = textY + radius * 0.1f;
+                textX = textX - radius * 0.2f;
+            } else if (central >= 135 && central < 225) {
+                textX = textX - radius * 0.2f;
+            } else if (central >= 225 && central <= 270) {
+                textX = textX - radius * 0.1f;
             }
             //画出百分比
-            canvas.drawText((float)(Math.round(sweepAngle/360*100*100))/100+"%",textX,textY,paintLine);
+            canvas.drawText((float) (Math.round(sweepAngle / 360 * 100 * 100)) / 100 + "%", textX, textY, paintLine);
             //初始化画笔
             paint.reset();
 
@@ -131,6 +136,7 @@ public class ArcView extends View{
 
     /**
      * 设置数据
+     *
      * @param i
      */
     private void setPaint(int i) {
@@ -147,8 +153,8 @@ public class ArcView extends View{
      * 初始化数据
      */
     private void initData() {
-        radius = Math.min(w,h)/2*0.7f;
-        rectF = new RectF(-radius,-radius,radius,radius);
+        radius = Math.min(w, h) / 2 * 0.7f;
+        rectF = new RectF(-radius, -radius, radius, radius);
     }
 
     public void setList(List<DateEntity> list) {
@@ -158,10 +164,10 @@ public class ArcView extends View{
     /**
      * @return 计算出总共的份数
      */
-    private  float allPoint(){
-        float point= 0;
-        for (int i=0;i<list.size();i++){
-            point = point+list.get(i).getScale();
+    private float allPoint() {
+        float point = 0;
+        for (int i = 0; i < list.size(); i++) {
+            point = point + list.get(i).getScale();
         }
         return point;
     }

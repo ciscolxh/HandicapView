@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 27
-    buildToolsVersion "27.0.3"
+    buildToolsVersion "28.0.3"
     defaultConfig {
         applicationId "com.loveluo.arcview"
         minSdkVersion 15
@@ -25,6 +25,9 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     implementation 'com.android.support:appcompat-v7:27.1.1'
-    implementation 'com.android.support.constraint:constraint-layout:1.0.0-alpha7'
+
+    //JSON解析
+    implementation 'com.google.code.gson:gson:2.8.2'
+    implementation 'com.android.support.constraint:constraint-layout:2.0.0-alpha3'
     testImplementation 'junit:junit:4.12'
 }

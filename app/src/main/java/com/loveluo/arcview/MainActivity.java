@@ -3,9 +3,11 @@ package com.loveluo.arcview;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 import com.loveluo.arcview.entity.DateEntity;
 import com.loveluo.arcview.view.ArcView;
+import com.loveluo.arcview.view.ProgressBarView;
 import com.loveluo.arcview.view.ReatFView;
 
 import java.util.ArrayList;
@@ -17,6 +19,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
     private ArcView arcView;
     private ReatFView reatFView;
+    private ProgressBarView proBar;
     List<DateEntity> list = new ArrayList<>();
 
     @Override
@@ -29,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     private void initView() {
         arcView = findViewById(R.id.arcView);
         reatFView = findViewById(R.id.reatFView);
+        proBar = findViewById(R.id.proBar);
         list.add(new DateEntity(1.0f, Color.RED));
         list.add(new DateEntity(2.0f,Color.GREEN));
         list.add(new DateEntity(7.0f,Color.BLUE));
@@ -38,5 +42,13 @@ public class MainActivity extends AppCompatActivity {
         list.add(new DateEntity(5.0f,Color.DKGRAY));
         arcView.setList(list);
         reatFView.setList(list);
+
+        proBar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                proBar.setStatus(2);
+            }
+        });
+
     }
 }

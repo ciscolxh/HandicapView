@@ -1,0 +1,60 @@
+{
+  "symbol": "BTC_USDT",
+  "sequenceId": 60601,
+  "timestamp": 1545032768245,
+  "price": 123,
+  "buyOrders": [
+//    {
+//      "price": 130,
+//      "amount": 2,
+//      "depth": 0
+//    },
+    {
+      "price": 129,
+      "amount": 1,
+      "depth": 0
+    },
+    {
+      "price": 128,
+      "amount": 2,
+      "depth": 0
+    },
+    {
+      "price": 127,
+      "amount": 1,
+      "depth": 0
+    },
+    {
+      "price": 126,
+      "amount": 3,
+      "depth": 0
+    }
+  ],
+  "sellOrders": [
+    {
+      "price": 131,
+      "amount": 2,
+      "depth": 0
+    },
+    {
+      "price": 132,
+      "amount": 1,
+      "depth": 0
+    },
+    {
+      "price": 133,
+      "amount": 3,
+      "depth": 0
+    },
+    {
+      "price": 134,
+      "amount": 1,
+      "depth": 0
+    },
+    {
+      "price": 135,
+      "amount": 1,
+      "depth": 0
+    }
+  ]
+}
